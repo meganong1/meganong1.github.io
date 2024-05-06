@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Now Bold";
+  src: url("/fonts/now.bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Now Medium";
+  src: url("/fonts/now.medium.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Now Regular";
+  src: url("/fonts/now.regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  margin: 0; 
+  background-image: url('background2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.wrapper-main {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.title {
+  color: #121F61;
+  font-weight: bold;
+  font-size: 2.5rem; 
+}
+
+.about-me {
+  color: #121F61;
+  font-weight: normal;
+  font-size: 1.25rem; 
+  margin-bottom: 20px;
+}
+
+.contact-links a {
+  color: #121F61;
+  font-weight: bold;
+  font-size: 1.25rem; 
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #030e41; 
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .about-me, .contact-links a {
+    font-size: 1rem; 
+  }
+}
