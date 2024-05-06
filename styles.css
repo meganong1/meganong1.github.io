@@ -16,58 +16,80 @@
   font-weight: normal;
 }
 
-body {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100vh;
-  margin: 0; 
-  background-image: url('background2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Poppins', sans-serif; 
+* {
+  box-sizing: border-box;
 }
 
-.wrapper-main {
-  width: 90%;
-  max-width: 800px;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: left;
+.flex-container {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
 }
 
 .title {
   color: #121F61;
-  font-weight: bold;
-  font-size: 2.5rem; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;    
+  justify-content: center;
+  min-height: 100vh;       
+  margin: 0;
+  padding: 0;
+  background: url('background2.png') center / cover no-repeat fixed;
+  overflow: hidden;       
+}
+
+.title {
+  font-size: 48px;
+  margin-top: 0;           
+  padding-top: 20px;      
 }
 
 .about-me {
+  font-size: 20px;
+  margin-top: -20px;       
   color: #121F61;
-  font-weight: normal;
-  font-size: 1.25rem; 
-  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .contact-links a {
+  font-size: 20px;
   color: #121F61;
-  font-weight: bold;
-  font-size: 1.25rem; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .contact-links a:hover {
-  color: #030e41; 
+  color: #120e5a;
 }
 
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
+.wrapper-main {
+  width: 800px;
+  margin: auto;
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+
+/* for mobile devices */
+@media (max-width: 767px) {
+  body {
+    padding-top: 0; 
+    transform: translateY(-20px); 
   }
 
-  .about-me, .contact-links a {
-    font-size: 1rem; 
+  .title {
+    font-size: 32px; 
+    padding-top: 10px;
   }
+
+  .about-me {
+    margin-top: -10px;
+}
 }
